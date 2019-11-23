@@ -38,10 +38,10 @@ SELECT COUNT(DISTINCT(y)) FROM demo;
 """
 
 curs4 = conn.cursor()
-print(curs4.execute(query4).fetchall())
+print('Number of rows = ', curs4.execute(query4).fetchall()[0][0])
 
 curs5 = conn.cursor()
-print(curs5.execute(query5).fetchall())
+print('Number of x and y 5 or greater = ', curs5.execute(query5).fetchall()[0][0])
 
 curs6 = conn.cursor()
-print(curs6.execute(query6).fetchall())
+print('Number of distinct y values = ', curs6.execute(query6).fetchall()[0][0])
