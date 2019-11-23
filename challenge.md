@@ -130,9 +130,17 @@ interview screening questions (a form you fill when applying for a job):
 
 - In the Northwind database, what is the type of relationship between the
   `Employee` and `Territory` tables?
+  
+  The 'Employee' and 'Territory' table have a many-to-many relationship.  Multiple records in 'Employee' are related to multiple records in 'Territory'.  A join table 'EmployeeTerritory' is used to map the records.
+  
 - What is a situation where a document store (like MongoDB) is appropriate, and
   what is a situation where it is not appropriate?
+  
+  A NoSQL database can be approriate for very large amounts of data that is not transactional in nature.  NoSQL DBs can be highly scalable with less structured data.  It is not approriate for transational data that requires a high level of security.
+  
 - What is "NewSQL", and what is it trying to achieve?
+
+Is a new class of RDBMS that seeks to provide the scalability of NoSQL with the reliability, security and ACID transactional features of a traditional RDBMS.  ACID is the Atomic, Cinistent, Isolation and Durability that relational databases have traditionally provided.  NewSQL is trying to achieve the best of both NoSQL and RDBMS.
 
 ### Part 5 - Turn it in!
 Provide all the files you wrote (`demo_data.py`, `northwind.py`), as well as
